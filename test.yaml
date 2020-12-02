@@ -1,0 +1,13 @@
+---
+# FPP YAML config example
+config_name: ABC - Stop
+steps:
+    - name: Host001
+      host: 127.0.0.1
+      script: script1.sh
+
+    - name: Host002
+      host: 127.0.0.2
+      script: script2.sh
+      dep:
+        - Host001
