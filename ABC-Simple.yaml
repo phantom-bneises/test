@@ -1,6 +1,6 @@
 ---
 # FPP YAML config example
-config_name: ABC - Sleep
+config_name: ABC - Simple
 steps:
     - name: Host001
       host: 127.0.0.1
