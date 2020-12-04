@@ -1,0 +1,31 @@
+---
+# FPP YAML config example
+config_name: ABC - Bottom_heavy_fail
+steps:
+    - name: Host001
+      host: 127.0.0.1
+      script: sleep10.sh
+
+    - name: Host002
+      host: 127.0.0.2
+      script: exit1.sh
+      dep:
+        - Host001
+      
+    - name: Host003
+      host: 127.0.0.3
+      script: sleep10.sh
+      dep:
+        - Host002
+      
+    - name: Host004
+      host: 127.0.0.4
+      script: sleep10.sh
+      dep:
+        - Host002
+        
+    - name: Host005
+      host: 127.0.0.5
+      script: sleep10.sh
+      dep:
+        - Host002
